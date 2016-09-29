@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Vision2020</title>
         <meta name="description" content="">
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
@@ -33,7 +33,7 @@
                         <a target="_BLANK" href="http://vamanufacturers.com/virginia-industry-foundation/" class="header__sponsors__link header__sponsors__link--vif">
                             <img src="img/vif-logo.png" class="header__sponsors__link--img header__sponsors__link--img-vif" alt="Virginia Industry Foundation" />
                         </a>
-                        <a target="_BLANK" href="https://www.dreamitdoitvirginia.com/" class="header__sponsors__link header__sponsors__link--msi">
+                        <a target="_BLANK" href="http://manufacturingskillsinstitute.org/" class="header__sponsors__link header__sponsors__link--msi">
                             <img src="img/msi-logo.png" class="header__sponsors__link--img header__sponsors__link--img-msi" alt="Manufacturing Skills Institute" />
                         </a>
                         <a target="_BLANK" href="https://www.dreamitdoitvirginia.com/" class="header__sponsors__link header__sponsors__link--vma">
@@ -66,14 +66,48 @@
                     </div>
                     <div class="clear"></div>
                 </section>
-                <section class="main__download">
-                    <h2 class="main__download--header">Make Your Pledge Today!</h2>
-                    <div class="main__download--download">
+                <section class="main__pledge">
+                    <h2 class="main__pledge--header">Make Your Pledge Today!</h2>
+                    <div class="main__pledge--block main__pledge--submission">
+                        <div class="main__pledge--submission-wrapper">
+                            <form class="main__pledge--form" is="ajax-form" action="http://manufacturingskillsinstitute.org/vision2020/includes/form.php" method="post" id="pledge-form">
+                                <label class="main__pledge--label main__pledge--label-check" for="pledge"><input class="main__pledge--field main__pledge--field-check" id="pledge" type="checkbox" novalidate name="pledge" checked />YES! I want to close the gap.</label>
+                                <p>I pledge to contribute the following amount to help MSI reach its goal.</p>
+                                
+                                <p style="position:relative;"><label class="main__pledge--label main__pledge--label-amount" for="1000"><input checked class="main__pledge--field main__pledge--field-amount" id="1000" value="1000" type="radio" novalidate name="pledge_amount" /> $1,000</label>
+
+                                <label class="main__pledge--label main__pledge--label-amount" for="5000"><input class="main__pledge--field main__pledge--field-amount" id="5000" value="5000" type="radio" novalidate name="pledge_amount" /> $5,000</label>
+
+                                <label class="main__pledge--label main__pledge--label-amount" for="10000"><input class="main__pledge--field main__pledge--field-amount" id="10000" value="10000" type="radio" novalidate name="pledge_amount" /> $10,000</label><span class="disable"></span></p>
+
+                                <p><label class="main__pledge--label main__pledge--label-text" for="other">Other Amount:</label><input class="main__pledge--field main__pledge--field-text main__pledge--field-other" id="other" value="" type="text" name="pledge_amount_other" /><div class="clear"></div></p>
+
+                                <p><label class="main__pledge--label  main__pledge--label-text" for="name">Full Name:</label><input class="main__pledge--field main__pledge--field-text main__pledge--field-name" id="name" value="" type="text" required name="pledge_name" /><div class="clear"></div></p>
+
+                                <p><label class="main__pledge--label  main__pledge--label-text" for="org">Organization:</label><input class="main__pledge--field main__pledge--field-text main__pledge--field-org" id="org" value="" type="text" required name="pledge_organization" /><div class="clear"></div></p>
+
+                                <p><label class="main__pledge--label  main__pledge--label-text" for="email">Email:</label><input class="main__pledge--field main__pledge--field-text main__pledge--field-email" id="email" value="" type="email" required name="pledge_email" /><div class="clear"></div></p>
+
+                                <p><label class="main__pledge--label  main__pledge--label-text" for="phone">Phone:</label><input class="main__pledge--field main__pledge--field-text main__pledge--field-phone" id="phone" value="" type="tel" required name="pledge_tel" /><div class="clear"></div></p>
+
+                                <p style="text-align:center;margin-top:20px">
+                                    <input src="img/submit-button-up.jpg" onMouseOver="this.src='img/submit-button-down.jpg'" onMouseOut="this.src='img/submit-button-up.jpg'" alt="submit button" type="image" width="126px" height="45px" class="main__pledge--field main__pledge--field-submit" id="submit" value="" name="pledge_submit" />
+                                </p>
+                                
+                            <div class="clear"></div>
+                            </form>
+                            <div class="popup">
+                                <div class="popup__content">Email sent successfully</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__pledge--block main__pledge--download">
                         <a target="_BLANK" href="files/MSI-Vision2020-infographic-digital.pdf" title="Click to downnload">
-                            <img src="img/vision-infographic-boxes.jpg" alt="Download" /><br />
-                            <img src="img/download-button-down.jpg" alt="Download Button" />
+                            <img src="img/vision-infographic-boxes.jpg" alt="Download" /><br /><br />
+                            <span>Download full infographic.</span> <img src="img/download-button-up.jpg" onMouseOver="this.src='img/download-button-down.jpg'" onMouseOut="this.src='img/download-button-up.jpg'" alt="Download Button" />
                         </a>
                     </div>
+                    <div class="clear"></div>
                 </section>
                 <hr />
                 <section class="main__video">
@@ -82,9 +116,12 @@
                 </section>
             </main>
             <footer class="footer">
-                <span class="footer--copyright">©2016 Manufacturing Skills Institute</span>
+                <small class="footer--copyright">©2016 Manufacturing Skills Institute</small>
             </footer>
         </div>
+        <template class="ajax-form-template"><content></content></template>
+        <script src="js/webcomponents.js/webcomponents-lite.min.js"></script>
+        <script src="js/ajax-form/ajax-form.js"></script>
         <!-- <script src="js/plugins.js"></script> -->
         <!-- <script src="js/main.js"></script> -->
         <script src="js/plugins.min.js"></script>

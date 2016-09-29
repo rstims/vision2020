@@ -1,3 +1,6 @@
 /node_modules/
 /.sass-cache/
 /js/vendor/
+/.ftppass
+/sftp-config.json
+/sftpCache.json

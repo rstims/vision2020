@@ -6,6 +6,8 @@ body{
   background-color:#dedede;
   background-repeat:no-repeat;
   font-family:'Arial', sans-serif;
+  font-size:15px;
+  color:$blue;
 }
 hr{
 	width:90%;
@@ -70,14 +72,150 @@ section{margin-bottom:30px;}
 		}
 		.main__callout--section-icon{margin-right:10px;}
 	}
-	.main__download{
-		.main__download--download{
-			padding-top:20px;
+	.main__pledge{
+
+		.main__pledge--block{
+			width:50%;
+			float:left;
+		}
+
+		.main__pledge--download{
+			padding-top: 60px;
 			text-align:center;
+			a{text-decoration:none;}
+			span{
+				color:$blue;
+				font-size:19px;
+			}
+		}
+
+		.main__pledge--submission-wrapper{
+			width:75%;
+			margin:auto;
+			border-radius:3px;
+			border-top:25px solid $orange;
+			background:$orange;
+			position:relative;
+		}
+		.main__pledge--form{
+			border-radius:3px;
+			background:#eeeeee;
+			padding:25px 45px;
+			
+			.main__pledge--field-check{
+				visibility:hidden;
+				height:0;
+				position: relative;
+				width:0;
+			}
+			.main__pledge--field-check:before{
+				position: absolute;
+				left: -55px;
+				top: -25px;
+				visibility:visible;
+				content:'';
+				width:40px;
+				height:40px;
+				border:2px solid $green;
+				background:white;
+			}
+			.main__pledge--field-check:checked:before{
+				background-image:url(../img/check.png);
+				background-position: center center;
+				background-repeat: no-repeat;
+			}
+
+			.main__pledge--label-check{
+				font-family: 'EB Garamond', serif;
+				font-weight: bold;
+				color:$blue;
+				font-size:31px;
+				line-height:1;
+				padding-left: 70px;
+				margin-bottom:20px;
+			}
+
+			.main__pledge--field-amount{
+				visibility:hidden;
+				height:0;
+				position: relative;
+				width:0;
+			}
+
+			.main__pledge--label-amount{
+				padding-left:30px;
+				font-size:20px;
+				font-family: 'EB Garamond', serif;
+				font-weight: bold;
+			}
+
+			.main__pledge--field-amount{
+				visibility:hidden;
+				height:0;
+				position: relative;
+				width:0;
+			}
+
+			.main__pledge--field-amount:before{
+				position: absolute;
+				left: -25px;
+				top: -20px;
+				visibility:visible;
+				content:'';
+				width:25px;
+				height:25px;
+				border-radius: 50%;
+				border:1px solid $blue;
+				background:white;
+			}
+
+			.main__pledge--field-amount:after{
+				position:absolute;
+				visibility:hidden;
+				content:'';
+				width: 19px;
+			    height: 19px;
+			    border-radius: 50%;
+			    background: #23458c;
+			    left: -22px;
+			    top: -17px;
+			}
+			.main__pledge--field-amount:checked:after{
+				visibility:visible;
+			}
+
+			.main__pledge--field-text{
+				padding:0 5px;
+			}
+			.main__pledge--field-text:focus{
+				outline-color:$orange;
+			}
+			.main__pledge--label-text{
+				width: 110px;
+				float:left;
+				text-align: right;
+			}
+			.main__pledge--field-text{
+				float:left;
+				width: 160px;
+				margin-left: 5px;
+			}
+
+			.disable{
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 99999;
+				background: rgba(238,238,238,0.75);
+				display:none;
+			}
+
 		}
 	}
 
-	.main__download--header, .main__intro--header, .main__video--header{
+	.main__pledge--header, .main__intro--header, .main__video--header{
 		text-align:center;
 		color:$orange;
 		font-family: 'EB Garamond', serif;
@@ -92,6 +230,8 @@ section{margin-bottom:30px;}
 	}
 
 }
+
+
 .footer{
 	padding:10px;
 	background:$blue;
@@ -100,6 +240,29 @@ section{margin-bottom:30px;}
 	}
 }
 
+/*.popup{display:none;}*/
 
+.popup{
+	display:none;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background:transparent;
+	text-align: center;
+	background: rgba(238,238,238,0.75);
+	.popup__content{
+		font-size:24px;
+		background:white;
+		position:absolute;
+		left:50%;
+		top:50%;
+		padding: 20px;
+		-webkit-transform:translate(-50%,-50%);
+		-ms-transform:translate(-50%,-50%);
+		transform:translate(-50%,-50%);
+	}
+}
 
 
