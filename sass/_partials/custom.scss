@@ -1,0 +1,105 @@
+/**/
+.clear{clear:both;}
+
+body{
+  background-image:url(../img/bg-file1.jpg);
+  background-color:#dedede;
+  background-repeat:no-repeat;
+  font-family:'Arial', sans-serif;
+}
+hr{
+	width:90%;
+}
+.site-wrap{
+	background:white;
+	padding-left:0;
+	padding-right:0;
+	width:975px;
+	margin:auto;
+}
+
+.header{
+	background:$blue;
+	padding:25px 30px;
+
+	.header__logo{
+		width:40%;
+		float:left;
+	}
+	.header__sponsors{
+		width:auto;
+		float:right;
+	}
+}
+
+.header__sponsors{
+	.header__sponsors__link{
+		margin-left:20px;
+	}
+}
+
+section{margin-bottom:30px;}
+.main{
+	padding-bottom:35px;
+
+	.main__intro{
+		padding:35px 35px 20px 35px;
+		text-align:center;
+		.main__intro--content{
+			color:$grey;
+			font-size:22px;
+		}
+		.main__intro--content{
+			margin: 0 0 40px;
+		}
+		.main__intro--content:last-of-type{
+			margin: 0 0 20px;
+		}
+	}
+
+	.main__callout{
+		background:$darkgreen;
+		.main__callout--section{
+			float:left;
+			width:33%;
+		}
+		.main__callout--section-goals{
+			.main__callout--section-img{
+				margin-top:25px;
+			}
+		}
+		.main__callout--section-icon{margin-right:10px;}
+	}
+	.main__download{
+		.main__download--download{
+			padding-top:20px;
+			text-align:center;
+		}
+	}
+
+	.main__download--header, .main__intro--header, .main__video--header{
+		text-align:center;
+		color:$orange;
+		font-family: 'EB Garamond', serif;
+		font-size:31px;
+		margin: 0 0 30px;
+	}
+	.main__video{
+		.main__video--video{
+			margin:auto;
+			display: block;
+		}
+	}
+
+}
+.footer{
+	padding:10px;
+	background:$blue;
+	.footer--copyright{
+		color:white;
+	}
+}
+
+
+
+
