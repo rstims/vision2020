@@ -49,6 +49,7 @@ module.exports = function (grunt) {
                             '*.js',
                             '!*.min.js',
                             '!Gruntfile.js',
+                            '!webcomponents.js',
                         ],
                         dest: '<%= dirs.js %>/',
                         ext: '.min.js'
