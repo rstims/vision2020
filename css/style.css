@@ -165,6 +165,27 @@ section {
   border: 1px solid #23458c;
   background: white;
 }
+.main .main__pledge .main__pledge--form .main__pledge--field-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border-radius: 0;
+  border-color: #23458c;
+  padding: 8px;
+  background-color: transparent;
+  color: #23458c;
+}
+.main .main__pledge .main__pledge--form .main__pledge--field-select-wrap {
+  position: relative;
+}
+.main .main__pledge .main__pledge--form .main__pledge--field-select-wrap:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  position: absolute;
+  right: 11px;
+  top: 11px;
+}
 .main .main__pledge .main__pledge--form .main__pledge--field-amount:after {
   position: absolute;
   visibility: hidden;
@@ -182,7 +203,8 @@ section {
 .main .main__pledge .main__pledge--form .main__pledge--field-text {
   padding: 0 5px;
 }
-.main .main__pledge .main__pledge--form .main__pledge--field-text:focus {
+.main .main__pledge .main__pledge--form .main__pledge--field-text:focus,
+.main .main__pledge .main__pledge--form .main__pledge--field-select:focus {
   outline-color: #e86d30;
 }
 .main .main__pledge .main__pledge--form .main__pledge--label-text {

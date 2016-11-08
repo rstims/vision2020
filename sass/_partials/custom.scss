@@ -168,7 +168,28 @@ section{margin-bottom:30px;}
 				border:1px solid $blue;
 				background:white;
 			}
+			.main__pledge--field-select{
+				-webkit-appearance:none;
+				-moz-appearance:none;
+				appearance:none;
+				width:100%;
+				border-radius:0;
+				border-color:$blue;
+				padding:8px;
+				background-color:transparent;
+				color:$blue;
+			}
+			.main__pledge--field-select-wrap{
+				position:relative;
+				&:after{
+					font-family: 'Glyphicons Halflings';
+					content: "\e114";
+					position: absolute;
+					right: 11px;
+					top: 11px;
 
+				}
+			}
 			.main__pledge--field-amount:after{
 				position:absolute;
 				visibility:hidden;
@@ -187,7 +208,8 @@ section{margin-bottom:30px;}
 			.main__pledge--field-text{
 				padding:0 5px;
 			}
-			.main__pledge--field-text:focus{
+			.main__pledge--field-text:focus,
+			.main__pledge--field-select:focus{
 				outline-color:$orange;
 			}
 			.main__pledge--label-text{
